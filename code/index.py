@@ -2,6 +2,7 @@ from math import ceil, floor, log10
 import random
 from sympy import *
 import gmpy2
+#create venv in new folder if needed, python3 -m venv breaking-rsa
 #cd breaking-rsa/bin; source activate; cd ..;cd code;
 #pip3 install sympy
 #pip3 install gmpy2
