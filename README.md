@@ -77,7 +77,7 @@ So, prime numbers p and q are both
 
 - random ✔️
 - large ✔️
-1. Compute *n* = *pq*
+2. Compute *n* = *pq*
 
 ```julia
 Calculating n (public after calc) as p*q:
@@ -89,7 +89,7 @@ Number of bits of n: 2043
 
 n is very big, impossible to do factorization from computational security standpoint ✔️
 
-1. Compute Φ(*n*)=(p-1)(q+1)
+3. Compute Φ(*n*)=(p-1)(q+1)
 
 ```julia
 Calculating phi(n) (must stay super secret) as (p-1)*(q-1):
@@ -99,13 +99,13 @@ Calculating phi(n) (must stay super secret) as (p-1)*(q-1):
 Number of bits of phi(n): 2043
 ```
 
-1. Choose an integer *e* such that 1 < *e* < Φ(*n*) and gcd(*e*, Φ(*n*)) = 1
+4. Choose an integer *e* such that 1 < *e* < Φ(*n*) and gcd(*e*, Φ(*n*)) = 1
 
 ```python
 e = 65537
 ```
 
-1. Determine *d* as *d* ≡ *e* (mod Φ(*n*)); that is, *d* is the modular multiplicative inverse of *e* modulo Φ(*n*)
+5. Determine *d* as *d* ≡ *e* (mod Φ(*n*)); that is, *d* is the modular multiplicative inverse of *e* modulo Φ(*n*)
 
 ```python
 
@@ -130,8 +130,8 @@ d (private key): 138558252269673830488877353980630498309652402340192107056538085
 Number of bits of private key d: 2041
 ```
 
-1. Safely get rid of prime numbers p and q, as well as Φ(*n*)
-2. Share the e (public key) and n via public channel freely
+6. Safely get rid of prime numbers p and q, as well as Φ(*n*)
+7. Share the e (public key) and n via public channel freely
 
 ## Conclusion
 
